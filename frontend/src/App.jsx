@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import Navbar from './components/Navbar';
 import BottomNav from './components/BottomNav';
 import RewardModal from './components/RewardModal';
@@ -190,6 +191,9 @@ export default function App() {
           onClose={() => setRewardData(null)}
         />
       )}
+
+      {/* Vercel Web Analytics */}
+      <Analytics />
     </div>
   );
 }
