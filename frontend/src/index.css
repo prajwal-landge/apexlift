@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #0B0B0C;
+    color: #F4F4F5;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, .font-headline {
+    font-family: 'Barlow Condensed', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0B0B0C;
+}
+::-webkit-scrollbar-thumb {
+  background: #2A2A30;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #9A9AA3;
+}
+
+/* Athletic glow effects */
+.glow-gold {
+  box-shadow: 0 0 20px rgba(245, 181, 60, 0.25);
+}
+
+.glow-ember {
+  box-shadow: 0 0 25px rgba(224, 42, 31, 0.35);
+}
+
+.glow-streak {
+  box-shadow: 0 0 20px rgba(52, 210, 123, 0.25);
+}
+
+/* Subtly animated XP pulse */
+@keyframes xpGainPop {
+  0% { transform: scale(0.9); opacity: 0; }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.animate-xp-pop {
+  animation: xpGainPop 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
